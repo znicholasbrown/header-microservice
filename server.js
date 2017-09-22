@@ -6,9 +6,9 @@ app.get("/", function (req, res) {
   let ipregex = /[,]/g,
       lanregex = /[,]/g,
       softregex = /\(([^\)]+)\)/;
-  
+  console.log(req.headers);
   let ipaddress = req.headers['x-forwarded-for'],
-      language = req.headers['accept-language'], 
+      language = req.headers['accept-language'],
       software = req.headers['user-agent'];
 
   let object = {
@@ -16,7 +16,7 @@ app.get("/", function (req, res) {
     "language": language.slice(0, lanregex.exec(language).index),
     "software": software.match(softregex)[1]
   };
-  
+
   res.send(object);
 });
 
