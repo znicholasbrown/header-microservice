@@ -1,0 +1,24 @@
+{
+  "name": "request-header-parser-microservice",
+  "version": "0.0.1",
+  "description": "An API that returns a JSON object with the requester's IP address, software, and language.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://znicholasbrown.github.io/header-microservice"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "fcc",
+    "express"
+  ]
+}
